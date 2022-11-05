@@ -14,16 +14,16 @@ import { equalEmailValidator, equalNameValidator, equalPassValidator, validatorC
 export class SignupComponent implements OnInit {
 
   public formSignup: FormGroup = new FormGroup({
-    fullUserName: new FormControl('Шевченко Тарас Григорьевич', [Validators.required, validatorFullName]),
-    city: new FormControl('Киев', [Validators.required, validatorCity]),
-    school: new FormControl('СШ №61', [Validators.required]),
-    phone: new FormControl('+38(097)-558-77-77', [Validators.required, validatorPhone]),
+    fullUserName: new FormControl('', [Validators.required, validatorFullName]),
+    city: new FormControl('', [Validators.required, validatorCity]),
+    school: new FormControl('', [Validators.required]),
+    phone: new FormControl('+38(09', [Validators.required, validatorPhone]),
     colorTheme: new FormControl('#492727'),
-    userName: new FormControl('Dima', [Validators.required, validatorName, equalNameValidator]),
-    userEmail: new FormControl('ss@ss.ss', [Validators.required, validatorEmail, equalEmailValidator]),
+    userName: new FormControl('', [Validators.required, validatorName, equalNameValidator]),
+    userEmail: new FormControl('', [Validators.required, validatorEmail, equalEmailValidator]),
     pass: new FormGroup({
-      password: new FormControl ('1111', [ Validators.required, Validators.minLength(4)]),
-      rpassword: new FormControl('1111', [ Validators.required])
+      password: new FormControl ('', [ Validators.required, Validators.minLength(4)]),
+      rpassword: new FormControl('', [ Validators.required])
     }, 
     {
       validators: [ equalPassValidator]
