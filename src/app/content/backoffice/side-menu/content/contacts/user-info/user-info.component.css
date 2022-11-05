@@ -1,0 +1,19 @@
+.example-card {
+  max-width: 300px;
+  margin-bottom: 8px;
+}
+
+mat-label {
+  font-size: 10px;
+  text-decoration: underline;
+  color: rgb(107, 107, 107);
+  margin-right: 10px;
+  display:inline-block;
+  width: 60px
+}
+
+.iconUser {
+  font-size: 45px;
+  width: auto;
+  height: auto
+}

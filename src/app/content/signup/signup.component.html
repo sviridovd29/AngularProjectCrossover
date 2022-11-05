@@ -1,0 +1,87 @@
+<div class="auth-content">
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="formSignup" (submit)="onSubmit(formSignup.value)">
+                <p>Sign Up to continue</p>
+                <div class="signupContent" fxLayout="row" fxLayoutAlign="space-between center">
+                    <div class="signupContentFirst" fxFlex="50">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Full user name</mat-label>
+                            <input matInput type="text" formControlName="fullUserName">
+                            <mat-error *ngIf="formSignup.get('fullUserName')?.errors?.['fullNameError']">
+                                {{formSignup.get('fullUserName')?.errors?.['fullNameError']}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Your city</mat-label>
+                            <input matInput type="text" formControlName="city">
+                            <mat-error *ngIf="formSignup.get('city')?.errors?.['errorCity']">
+                                {{formSignup.get('city')?.errors?.['errorCity']}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>School</mat-label>
+                            <input matInput type="text" formControlName="school">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Phone +38(0XX)-XXX-XX-XX</mat-label>
+                            <input matInput type="text" formControlName="phone">
+                            <mat-error *ngIf="formSignup.get('phone')?.errors?.['errorPhone']">
+                                {{formSignup.get('phone')?.errors?.['errorPhone']}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Color theme</mat-label>
+                            <input matInput type="color" formControlName="colorTheme">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="signupContentSecond">
+                        <mat-form-field appearance="fill">
+                            <mat-label>User name</mat-label>
+                            <input matInput type="text" formControlName="userName">
+                            <mat-error *ngIf="formSignup.get('userName')?.errors?.['nameError']">
+                                {{formSignup.get('userName')?.errors?.['nameError']}}</mat-error>
+                            <mat-error *ngIf="formSignup.get('userName')?.errors?.['equalNameError']">
+                                {{formSignup.get('userName')?.errors?.['equalNameError']}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="text" formControlName="userEmail">
+                            <mat-error *ngIf="formSignup.get('userEmail')?.errors?.['emailError']">
+                                {{formSignup.get('userEmail')?.errors?.['emailError']}}</mat-error>
+                            <mat-error *ngIf="formSignup.get('userEmail')?.errors?.['equalEmailError']">
+                                {{formSignup.get('userEmail')?.errors?.['equalEmailError']}}</mat-error>
+                        </mat-form-field>
+
+                        <div formGroupName="pass">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password" formControlName="password">
+
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Repeat password</mat-label>
+                                <input matInput type="password" formControlName="rpassword">
+
+                            </mat-form-field>
+                            <mat-error *ngIf="formSignup.get('pass')?.errors?.['nonEqualPass']">
+                                {{formSignup.get('pass')?.errors?.['nonEqualPass']}}</mat-error>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <button mat-raised-button color="primary" type="submit" [disabled]="formSignup.invalid">Sign Up</button>
+                <a mat-button [routerLink]="'/login'">Log In</a>
+            </form>
+        </mat-card-content>
+    </mat-card>
+
+ 
+
+</div>

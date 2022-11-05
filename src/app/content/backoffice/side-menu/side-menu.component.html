@@ -1,0 +1,18 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer opened="true" class="example-sidenav" mode="side">
+      
+      <ng-content select=".menu"></ng-content> 
+      
+    </mat-drawer>
+  
+    <div (click)="flag = !flag" (click)="drawer.toggle()">
+        <mat-icon *ngIf="flag">arrow_back_ios</mat-icon>
+        <mat-icon *ngIf="!flag">arrow_forward_ios</mat-icon>
+    </div>
+
+    <div class="mainContent" [ngStyle]="{color: color}">
+
+       <ng-content></ng-content>
+    
+      </div>
+  </mat-drawer-container>

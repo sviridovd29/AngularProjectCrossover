@@ -1,0 +1,42 @@
+.example-container {
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav{
+    background-color: #878787;
+    overflow: hidden;
+  }
+  
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 90%;
+  }
+  
+   .mainContent {
+    padding: 40px 30px 30px 60px;
+  }
+  
+  mat-icon {
+    position: absolute;
+    top: 387px;
+    left: 16px;
+    color: #630016;
+  }
+  
+  .icon_circle_left {
+    font-size: 25px;
+    color: #630016;
+  }
+  
+  .icon_circle_right{
+    font-size: 25px;
+    color: #630016;
+  }
+  
+  .icon_circle_left:hover, .icon_circle_right:hover{
+    color: red;
+  }
+  
+  

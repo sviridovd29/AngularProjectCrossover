@@ -1,0 +1,52 @@
+<div class="mainContentAbout">
+  <div class="aboutContentBlock">
+    <h1>About page</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut blanditiis debitis delectus distinctio,
+      dolor, dolore ea enim eveniet impedit ipsa labore laboriosam magnam perspiciatis quas quisquam similique sint
+      voluptas? Commodi delectus dolores ex facere labore libero maxime praesentium provident.</p>
+    <hr>
+    <div class="forBlockItem">
+
+      <div class="mainItem" *ngFor="let item of carsArr">
+        <div class="bg"></div>
+        <div class="logoItem">
+          <img src="{{item.urlLogo}}" alt="logo{{item.brand}}">
+          <div class="titleItem">
+            <h2>{{item.brand}}</h2>
+            <p>{{item.series}}</p>
+            <h2>{{item.model}}</h2>
+          </div>
+        </div>
+
+        <div class="descriptionItem">
+          <p>{{item.description}}</p>
+        </div>
+
+        <div class="bottomImg">
+          <div class="dws-wrapper">
+            <div class="boxImg">
+              <img src="{{item.urlImg}}" alt="{{item.brand}}">
+              <div class="container">
+                <div class="text">
+                  <h1>{{item.brand}} {{item.model}} </h1>
+
+                  <a routerLink="{{item.path}}" class="bt">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="someText">
+  <div>
+    <span>Тут необходимо что-то написать</span>
+  </div>
+  <input #input type="text" (input)="changeText(input.value)">
+</div>

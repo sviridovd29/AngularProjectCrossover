@@ -1,0 +1,26 @@
+<mat-card class="example-card">
+    <mat-card-title-group>
+        <mat-card-title>{{user?.userName}}</mat-card-title>
+        <mat-card-subtitle>{{user?.fullUserName}}</mat-card-subtitle>
+        <mat-icon class="iconUser">person</mat-icon>
+    </mat-card-title-group>
+    <mat-card-content>
+        <mat-label>your Email:</mat-label>
+        <span>{{user?.userEmail}}</span>
+    </mat-card-content>
+    <mat-card-content>
+        <mat-label>your city:</mat-label>
+        <span>{{user?.city}}</span>
+    </mat-card-content>
+    <mat-card-content>
+        <mat-label>your school:</mat-label>
+        <span>{{user?.school}}</span>
+    </mat-card-content>
+    <mat-card-content>
+        <mat-label>your school:</mat-label>
+        <span>{{user?.phone}}</span>
+    </mat-card-content>
+
+
+    <ng-content></ng-content>
+</mat-card>

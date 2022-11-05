@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-around center">
+
+    <div fxLayoutAlign="center">
+
+        <mat-icon class="iconUser">account_circle</mat-icon>
+        <span>{{user.value?.fullUserName }}</span>
+    </div>
+
+    <div class="mainLogo">
+        <a [routerLink]="'/back'">
+            <img src="../../../../assets/img/logo-auto2.png" alt="">
+        </a>
+    </div>
+
+    <div class="logoutIcon">
+        <button mat-icon-button class="example-icon " aria-label="Example icon-button with home icon"
+            (click)="logOut()">
+            <mat-icon>settings_power</mat-icon>
+            <span>Exit</span>
+        </button>
+    </div>
+
+
+</mat-toolbar>

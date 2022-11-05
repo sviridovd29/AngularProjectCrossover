@@ -1,0 +1,35 @@
+.mat-toolbar.mat-primary {
+  background: #4b4848;
+  color: #fff;
+}
+
+
+.logoutIcon {
+  width: fit-content;
+  padding: 1px 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: #cccccc;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  color: #fff;
+}
+
+.logoutIcon:hover {
+
+  cursor: pointer;
+  color: #ff0000;
+  box-shadow: 2px 2px 2px #8B0000FF;
+}
+
+.mainLogo img {
+  height: 50px;
+}
+
+.iconUser {
+  margin: 4px 15px 0 0;
+}

@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<app-side-menu [color]="color">
+ 
+    <div class="menu">
+        <nav>
+            <ul class="navItem">
+              <li>
+                <a [routerLink]="'/back'" routerLinkActive="active one" [routerLinkActiveOptions]="{exact: true}">About</a>
+              </li>
+    
+              <li>
+                <a routerLink="bmw" routerLinkActive="active">BMW</a>
+              </li>
+    
+              <li>
+                <a routerLink="acura" routerLinkActive="active">Acura</a>
+              </li>
+    
+              <li>
+                <a routerLink="lexus" routerLinkActive="active">Lexus</a>
+              </li>
+    
+              <li>
+                <a routerLink="dodge" routerLinkActive="active">Dodge</a>
+              </li>
+    
+              <li>
+                <a routerLink="settings" routerLinkActive="active">Settings</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="logoForNav">
+            <img src="../../../assets/img/logo-auto2.png" alt="">
+          </div>
+    </div>
+
+    <router-outlet></router-outlet>
+
+</app-side-menu>
